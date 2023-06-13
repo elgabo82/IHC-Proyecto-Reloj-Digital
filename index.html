@@ -22,18 +22,13 @@
     <script>
         let hrs = document.getElementById("hrs");
         let min = document.getElementById("min");
-        let seg = document.getElementById("seg");
-
-
-        setInterval(
-            ()=> {
-                let tiempoActual = new Date();
+        let seg = document.getElementById("seg");        
         
-                hrs.innerHTML = (tiempoActual.getHours() < 10 ? "0" : "") + tiempoActual.getHours();
-                min.innerHTML = (tiempoActual.getMinutes() < 10 ? "0" : "") + tiempoActual.getMinutes();
-                seg.innerHTML = (tiempoActual.getSeconds() < 10 ? "0" : "") + tiempoActual.getSeconds();
-            }
-        );
+        let tiempoActual = new Date();
+
+        hrs.innerHTML = tiempoActual.getHours();
+        min.innerHTML = tiempoActual.getMinutes();
+        seg.innerHTML = tiempoActual.getSeconds();            
         
     </script>
 </body>
